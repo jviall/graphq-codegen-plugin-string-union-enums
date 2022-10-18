@@ -4,7 +4,11 @@
   "description": "For use with graphql-codegen package as a plugin to write GraphQL Enums as TypeScript unions of string-literals rather than TypeScript Enums",
   "main": "src/index.ts",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "prettier": "npm run prettier:fix",
+    "lint": "npx eslint"
   },
   "repository": {
     "type": "git",
@@ -22,11 +26,29 @@
   "author": "James Viall",
   "license": "MIT",
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-typescript": "^3.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "^2.7.1",
+    "husky": "^8.0.1"
+  },
+  "lint-staged": {
+    "*.{json,ts,js}": [
+      "prettier --write ."
+    ],
+    "*.{js,ts}": "eslint --fix"
   }
 }
