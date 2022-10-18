@@ -1,0 +1,32 @@
+{
+  "name": "graphql-codegen-plugin-string-union-enums",
+  "version": "0.1.0",
+  "description": "For use with graphql-codegen package as a plugin to write GraphQL Enums as TypeScript unions of string-literals rather than TypeScript Enums",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/jviall/graphql-codegen-plugin-string-union-enums"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "typescript",
+    "react",
+    "codegen",
+    "enum",
+    "union"
+  ],
+  "author": "James Viall",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
