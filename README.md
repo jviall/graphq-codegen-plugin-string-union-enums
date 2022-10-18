@@ -1,0 +1,1 @@
+# graphq-codegen-pluging-string-union-enums
