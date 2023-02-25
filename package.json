@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@graphql-codegen/plugin-helpers": "^2.7.1",
+    "@graphql-codegen/visitor-plugin-common": "^2.12.2",
     "husky": "^8.0.1"
   },
   "lint-staged": {
